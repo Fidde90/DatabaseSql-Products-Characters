@@ -1,15 +1,15 @@
 ﻿using DatabaseWPFTest.ViewModels;
-using System.Windows;
+using System.Windows.Controls;
 
-namespace DatabaseSql_Products_Characters
+namespace DatabaseWPFTest.Views
 {
-    public partial class MainWindow : Window
+    public partial class EditPage : UserControl
     {
-        public MainWindow()
+        public EditPage()
         {
             InitializeComponent();
         }
-        public MainWindow(MainWindowViewModel viewModel)
+        public EditPage(EditPageViewModel viewModel)
         {
             InitializeComponent();
             DataContext = viewModel;

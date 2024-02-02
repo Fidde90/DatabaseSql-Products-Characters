@@ -4,9 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DatabaseSql_Products_Characters"
+        
+        xmlns:viewmodels="clr-namespace:DatabaseWPFTest.ViewModels"
+        xmlns:views="clr-namespace:DatabaseWPFTest.Views"
+      
+        
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Record inventory" Height="700" Width="1100" >
     <Grid>
+        <ContentControl Content="{Binding CurrentViewModel}">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type viewmodels:MainPageViewModel}">
+                    <views:MainPage />
+                </DataTemplate>
 
+                <DataTemplate DataType="{x:Type viewmodels:EditPageViewModel}">
+                    <views:EditPage />
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type viewmodels:DetailsViewModel}">
+                    <views:DetailsPage />
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
     </Grid>
 </Window>
