@@ -12,6 +12,12 @@ namespace Infrastructure.Repositories
             _dataContext = context;
         }
 
+        /// <summary>
+        /// Adds one Entity to the database
+        /// </summary>
+        /// <param name="entity">The Entity to add</param>
+        /// <param name="asNoTracking"></param>
+        /// <returns>returns an Entity</returns>
         public virtual TEntity AddToDB(TEntity entity, bool asNoTracking = false)
         {
             try
@@ -27,6 +33,10 @@ namespace Infrastructure.Repositories
             return null!;
         }
 
+        /// <summary>
+        /// Gets all Entities of a type in the database.
+        /// </summary>
+        /// <returns>IEnumerable list</returns>
         public virtual IEnumerable<TEntity> GetAllFromDB()
         {
             try
@@ -39,6 +49,11 @@ namespace Infrastructure.Repositories
             return null!;
         }
       
+        /// <summary>
+        /// Gets one Entity of a given type from the database.
+        /// </summary>
+        /// <param name="predicate">Lambda expression</param>
+        /// <returns>returns an Entity</returns>
         public virtual TEntity GetOneFromDB(Expression<Func<TEntity, bool>> predicate)
         {
             try
@@ -51,6 +66,12 @@ namespace Infrastructure.Repositories
             return null!;
         }
 
+        /// <summary>
+        /// Updates an Entity of a given type in the database.
+        /// </summary>
+        /// <param name="entity">the entity with the new values</param>
+        /// <param name="predicate">Lambda expression</param>
+        /// <returns>returns the updated Entity</returns>
         public virtual TEntity UpdateEntityInDB(TEntity entity, Expression<Func<TEntity, bool>> predicate)
         {
             try
@@ -67,6 +88,11 @@ namespace Infrastructure.Repositories
             return null!;
         }
 
+        /// <summary>
+        /// Deletes on Entity of a given type in the database.
+        /// </summary>
+        /// <param name="predicate">Lambda expression</param>
+        /// <returns>return a boolean value, true if the entity is deleted, else false</returns>
         public virtual bool DeleteFromDB(Expression<Func<TEntity, bool>> predicate)
         {
             try
@@ -84,6 +110,11 @@ namespace Infrastructure.Repositories
             return false;
         }
 
+        /// <summary>
+        /// Checks if an entity of a given type exists in the database.
+        /// </summary>
+        /// <param name="predicate">Lambda expression</param>
+        /// <returns>returns a boolean value, true if the entity was found, else false</returns>
         public virtual bool Exists(Expression<Func<TEntity, bool>> predicate)
         {
             try

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseSql-Products-Characters", "DatabaseSql-Products-Characters\DatabaseSql-Products-Characters.csproj", "{BF1F6D99-4008-49E6-B3BF-214545283457}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseSql-Products-Characters", "DatabaseSql-Products-Characters\DatabaseSql-Products-Characters.csproj", "{BF1F6D99-4008-49E6-B3BF-214545283457}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{1A702F1D-B8CA-4915-8E8F-5D213A90718D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{1A702F1D-B8CA-4915-8E8F-5D213A90718D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Tests", "Infrastructure.Tests\Infrastructure.Tests.csproj", "{CD3F22A1-4E90-40B6-A97E-31A687552145}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1A702F1D-B8CA-4915-8E8F-5D213A90718D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A702F1D-B8CA-4915-8E8F-5D213A90718D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A702F1D-B8CA-4915-8E8F-5D213A90718D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3F22A1-4E90-40B6-A97E-31A687552145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3F22A1-4E90-40B6-A97E-31A687552145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3F22A1-4E90-40B6-A97E-31A687552145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3F22A1-4E90-40B6-A97E-31A687552145}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

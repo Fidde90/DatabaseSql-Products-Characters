@@ -24,9 +24,7 @@ namespace Infrastructure.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TracklistEntity>()
-                .HasKey(x => new { x.ArticleNumber, x.Title });
-
-     
+                .HasKey(x => new { x.ArticleNumber, x.Title });    
         }
     }
 }
