@@ -92,7 +92,6 @@ namespace DatabaseSql_Products_Characters.ViewModels
                 else
                     MessageBox.Show("The player alredy exsists, try again or check your spelling");
 
-
             PlayerWeapons.Clear();
             PlayerForm = new();
         }

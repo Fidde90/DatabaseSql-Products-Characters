@@ -1,4 +1,4 @@
-﻿<UserControl Background="CadetBlue" x:Class="DatabaseSql_Products_Characters.Views.MenuPage"
+﻿<UserControl Background="#1E1E1E" x:Class="DatabaseSql_Products_Characters.Views.MenuPage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
