@@ -1,15 +1,16 @@
 ﻿using DatabaseSql_Products_Characters.ViewModels;
-using System.Windows;
+using System.Windows.Controls;
 
-namespace DatabaseSql_Products_Characters
+namespace DatabaseSql_Products_Characters.Views
 {
-    public partial class MainWindow : Window
+    public partial class MenuPage : UserControl
     {
-        public MainWindow()
+        public MenuPage()
         {
             InitializeComponent();
         }
-        public MainWindow(MainWindowViewModel viewModel)
+
+        public MenuPage(MenuPageViewModel viewModel)
         {
             InitializeComponent();
             DataContext = viewModel;

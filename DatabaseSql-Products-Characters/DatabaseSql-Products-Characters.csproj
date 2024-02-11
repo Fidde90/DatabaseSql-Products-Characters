@@ -3,14 +3,15 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <RootNamespace>DatabaseSql_Products_Characters</RootNamespace>
     <Nullable>enable</Nullable>
+	  <RootNamespace>DatabaseSql_Products_Characters</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Images\12in-Vinyl-LP-Record-Angle.jpg" />
+    <None Remove="Images\Archvile.heic" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,5 +31,6 @@
 
   <ItemGroup>
     <Resource Include="Images\12in-Vinyl-LP-Record-Angle.jpg" />
+    <Resource Include="Images\Archvile.heic" />
   </ItemGroup>
 </Project>

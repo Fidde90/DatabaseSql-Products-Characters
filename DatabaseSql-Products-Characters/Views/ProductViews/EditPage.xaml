@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="DatabaseSql_Products_Characters.Views.EditPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DatabaseSql_Products_Characters.Views"            
+             xmlns:models="clr-namespace:DatabaseSql_Products_Characters.Models"
+             xmlns:viewModels="clr-namespace:DatabaseSql_Products_Characters.ViewModels"
+        
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Margin="20">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Label Content="Artist"/>
+            <TextBox FontSize="15" FontWeight="Regular" Height="26" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,10" Text="{Binding EditProduct.Artist}"/>
+            <Label Content="Title"/>
+            <TextBox FontSize="15" FontWeight="Regular" Height="26" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,10" Text="{Binding EditProduct.Title}"/>
+            <Label Content="Category"/>
+            <TextBox FontSize="15" FontWeight="Regular" Height="26" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,10" Text="{Binding EditProduct.Category}"/>
+            <Label Content="Genre"/>
+            <TextBox FontSize="15" FontWeight="Regular" Height="26" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,10" Text="{Binding EditProduct.Genre}"/>
+            <Label Content="Price"/>
+            <TextBox FontSize="15" FontWeight="Regular" Height="26" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,10" Text="{Binding EditProduct.Price}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="10,0,0,0">
+            <Label Content="Quantity"/>
+            <TextBox FontSize="15" FontWeight="Regular" Height="26" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,10" Text="{Binding EditProduct.Quantity}"/>
+            <Label Content="RecordedDate"/>
+            <TextBox FontSize="15" FontWeight="Regular" Height="26" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,10" Text="{Binding EditProduct.RecordedDate}"/>
+            <Label Content="ReleseDate"/>
+            <TextBox FontSize="15" FontWeight="Regular" Height="26" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,10" Text="{Binding EditProduct.ReleseDate}"/>
+            <Label Content="Label"/>
+            <TextBox FontSize="15" FontWeight="Regular" Height="26" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,10" Text="{Binding EditProduct.Label}"/>
+            <Label Content="Country"/>
+            <TextBox FontSize="15" FontWeight="Regular" Height="26" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,10" Text="{Binding EditProduct.Country}"/>
+        </StackPanel>
+
+        <Canvas Grid.Column="0" Grid.Row="1">
+            <StackPanel>
+                <Label Content="About"/>
+                <TextBox FontSize="15" FontWeight="Regular" TextWrapping="Wrap" Width="410" Height="200" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Text="{Binding EditProduct.About}"/>
+            </StackPanel>
+        </Canvas>
+                  
+        <StackPanel Grid.Column="3" Grid.Row="1" Margin="20,0,0,0">
+            <Button Command="{Binding Update_BtnClickCommand}" Margin="0,25,0,10" Content="Save changes" Width="200" Padding="10" Background="DarkSeaGreen"/>
+            <Button Command="{Binding BackToHomePage_BtnClickCommand}" Content="Bck To Hompage" Padding="10" Width="200" Background="Black" Foreground="White"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -1,14 +1,13 @@
-﻿using Infrastructure.Contexts;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.Linq.Expressions;
 namespace Infrastructure.Repositories
 {
-    public abstract class BaseRepository<TEntity> where TEntity : class
+    public abstract class BaseRepository<TEntity,TContext> where TEntity : class where TContext : DbContext
     {
-        private readonly DataContext _dataContext;
+        private readonly TContext _dataContext;
 
-        protected BaseRepository(DataContext context)
+        protected BaseRepository(TContext context)
         {
             _dataContext = context;
         }

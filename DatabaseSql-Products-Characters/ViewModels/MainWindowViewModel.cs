@@ -1,9 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using DatabaseWPFTest.Views;
-using Infrastructure.Dtos;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DatabaseWPFTest.ViewModels
+namespace DatabaseSql_Products_Characters.ViewModels
 {
     public partial class MainWindowViewModel : ObservableObject
     {      
@@ -14,7 +12,7 @@ namespace DatabaseWPFTest.ViewModels
         public MainWindowViewModel(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
-            CurrentViewModel = _serviceProvider.GetRequiredService<MainPageViewModel>();
+            CurrentViewModel = _serviceProvider.GetRequiredService<MenuPageViewModel>();
         }
     }
 }

@@ -5,15 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DatabaseSql_Products_Characters"
         
-        xmlns:viewmodels="clr-namespace:DatabaseWPFTest.ViewModels"
-        xmlns:views="clr-namespace:DatabaseWPFTest.Views"
-      
-        
+        xmlns:viewmodels="clr-namespace:DatabaseSql_Products_Characters.ViewModels"
+        xmlns:views="clr-namespace:DatabaseSql_Products_Characters.Views" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         mc:Ignorable="d"
         Title="Record inventory" Height="700" Width="1100" >
     <Grid>
         <ContentControl Content="{Binding CurrentViewModel}">
             <ContentControl.Resources>
+
+                <DataTemplate DataType="{x:Type viewmodels:MenuPageViewModel}">
+                    <views:MenuPage />
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type viewmodels:CreateCharacterViewModel}">
+                    <views:CreateCharacterPage />
+                </DataTemplate>
+
                 <DataTemplate DataType="{x:Type viewmodels:MainPageViewModel}">
                     <views:MainPage />
                 </DataTemplate>
@@ -25,6 +33,19 @@
                 <DataTemplate DataType="{x:Type viewmodels:DetailsViewModel}">
                     <views:DetailsPage />
                 </DataTemplate>
+
+                <DataTemplate DataType="{x:Type viewmodels:AllPlayersViewModel}">
+                    <views:AllPlayersPage />
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type viewmodels:PlayerDetailsViewModel}">
+                    <views:PlayerDetailsPage />
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type viewmodels:EditPlayerViewModel}">
+                    <views:EditPlayerPage />
+                </DataTemplate>
+
             </ContentControl.Resources>
         </ContentControl>
     </Grid>
