@@ -68,7 +68,7 @@ namespace DatabaseSql_Products_Characters.ViewModels
         public void AddPlayer_BtnClick()
         {
                var race = _raceService.GetRace(PlayerForm.Race);
-                var kind = _kindService.GetKind(PlayerForm.Kind);
+               var kind = _kindService.GetKind(PlayerForm.Kind);
 
                 var newPlayer = new PlayerEntity
                 {
@@ -100,21 +100,24 @@ namespace DatabaseSql_Products_Characters.ViewModels
         [RelayCommand]
         public void AddWeapon_BtnClick()
         {
-            var weapon = _weaponService.GetWeapon(WeaponForm.Weapon.ToLower());
-            if (weapon != null)
+            if (!string.IsNullOrWhiteSpace(WeaponForm.Weapon))
             {
-                PlayerWeapons.Add(weapon);
-
-                if (PlayerWeapons.Count == 3)
+                var weapon = _weaponService.GetWeapon(WeaponForm.Weapon.ToLower());
+                if (weapon != null)
                 {
-                    WeaponBtnEnabled = "false";
-                    AddPlayerEnabled = "true";
-                }                  
+                    PlayerWeapons.Add(weapon);
+
+                    if (PlayerWeapons.Count == 3)
+                    {
+                        WeaponBtnEnabled = "false";
+                        AddPlayerEnabled = "true";
+                    }
+                }
+
+                else
+                    MessageBox.Show("The weapon does not exist, check your spelling");
             }
-
-            else
-                MessageBox.Show("The weapon does not exist, check your spelling");
-
+           
             WeaponForm = new();
         }
 
